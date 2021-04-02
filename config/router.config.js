@@ -23,7 +23,6 @@ export default [
     component: '../layouts/BasicLayout',
     Routes: ['src/pages/Authorized'],
     routes: [
-
       // dashboard
       { path: '/', redirect: '/account/center', authority: ['admin', 'user'] },
       {
@@ -56,9 +55,9 @@ export default [
           //   ],
           // },
           {
-            path:'/account/center',
-            name:'信息查询',
-            component:'./Account/Center/InfoQuery',
+            path: '/account/center',
+            name: '信息查询',
+            component: './Account/Center/InfoQuery',
           },
           {
             authority: ['user'],
@@ -131,26 +130,44 @@ export default [
       // },
       {
         authority: ['user'],
-        path:'/stuvacate',
-        name:'请假系统',
+        path: '/stuvacate',
+        name: '请假系统',
         icon: 'desktop',
-        routes:[
+        routes: [
           // {
           //   path:'/stuvacate/vacate',
           //   name:'学生请假',
           //   component:'./StuVacate/Vacate',
           // },
           {
-            path:'/stuvacate/dovacate',
-            name:'短期请假',
-            component:'./StuVacate/DoVacate',
+            path: '/stuvacate/dovacate',
+            name: '短期请假',
+            component: './StuVacate/DoVacate',
           },
           {
-            path:'/stuvacate/vacaterecord',
-            name:'请假记录',
-            component:'./StuVacate/VacateRecord',
-          }
-        ]
+            path: '/stuvacate/vacaterecord',
+            name: '请假记录',
+            component: './StuVacate/VacateRecord',
+          },
+        ],
+      },
+      {
+        authority: ['user'],
+        path: '/filehandle',
+        name: '文件处理',
+        icon: 'desktop',
+        routes: [
+          // {
+          //   path:'/stuvacate/vacate',
+          //   name:'学生请假',
+          //   component:'./StuVacate/Vacate',
+          // },
+          {
+            path: '/filehandle/wordhandle',
+            name: '论文格式检测',
+            component: './ExcelUpload/UploadFile',
+          },
+        ],
       },
       // {
       //   path:'/teainfo',
@@ -171,21 +188,21 @@ export default [
       // },
       {
         authority: ['admin'],
-        path:'/stumng',
-        name:'学生管理',
+        path: '/stumng',
+        name: '学生管理',
         icon: 'desktop',
-        routes:[
+        routes: [
           {
-            path:'/stumng/stuinfo',
-            name:'信息查询',
-            component:'./StuMng/StuInfo',
+            path: '/stumng/stuinfo',
+            name: '信息查询',
+            component: './StuMng/StuInfo',
           },
           {
-            path:'/stumng/vacate',
-            name:'请假管理',
-            component:'./StuMng/Vacate',
-          }
-        ]
+            path: '/stumng/vacate',
+            name: '请假管理',
+            component: './StuMng/Vacate',
+          },
+        ],
       },
       // {
       //   // authority: ['admin'],
@@ -197,7 +214,7 @@ export default [
       //       path: '/Newpage/Welcome',
       //       name: 'Welcome',
       //       component: './Newpage/Welcome',
-      //       // 
+      //       //
       //     }
       //   ]
       // },
@@ -388,7 +405,7 @@ export default [
       //     },
       //   ],
       // },
-      
+
       //  editor
       {
         authority: ['user'],
